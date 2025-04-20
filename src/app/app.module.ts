@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+
 import { AppComponent } from './app.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -21,7 +22,10 @@ import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { DashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { AppointmentComponent } from './doctor-appointments/doctor-appointments.component';
+import { PatientsComponent } from './doctor-patients/doctor-patients.component';
+import { PrescriptionComponent } from './doctor-prescriptions/doctor-prescriptions.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login-signup', pathMatch: 'full' },
@@ -35,7 +39,10 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'appointments', component: AppointmentsComponent },
   { path: 'admin-dashboard', component: AdminDashboardComponent },
-  { path: 'doctor-dashboard', component: DoctorDashboardComponent },
+  { path: 'doctor-dashboard', component: DashboardComponent }, // Default route for /doctor,
+  { path: 'doctor-patients', component: PatientsComponent },
+  { path: 'doctor-appointments', component: AppointmentComponent },
+  { path: 'doctor-prescriptions', component:PrescriptionComponent},
   { path: '**', redirectTo: '/login-signup' },
 ];
 
@@ -52,7 +59,10 @@ const routes: Routes = [
     ProfileComponent,
     AppointmentsComponent,
     AdminDashboardComponent,
-    DoctorDashboardComponent,
+    DashboardComponent,
+    AppointmentComponent,
+    PatientsComponent,
+    PrescriptionComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,10 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AppointmentsComponent } from './appointments/appointments.component'; // Import the new AppointmentsComponent
+import { PatientsComponent } from './doctor-patients/doctor-patients.component';
+import { AppointmentComponent } from './doctor-appointments/doctor-appointments.component';
+import { PrescriptionComponent } from './doctor-prescriptions/doctor-prescriptions.component';
+import { DashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' }, // Default route
@@ -18,7 +22,13 @@ const routes: Routes = [
   { path: 'blog', component: HomepageComponent }, // Placeholder
   { path: 'patient-dashboard', component: PatientDashboardComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'appointments', component: AppointmentsComponent }, // New appointments route
+  { path: 'appointments', component: AppointmentsComponent },
+  { path: 'doctor-dashboard', component: DashboardComponent }, // Default route for /doctor,
+  { path: 'doctor-patients', component: PatientsComponent },
+  { path: 'doctor-appointments', component: AppointmentComponent },
+  { path: 'doctor-prescriptions', component:PrescriptionComponent},
+  
+   // New appointments route
   /*
    * Uncomment and add these routes if you implement the corresponding components:
    * { path: 'search-healthcare', component: SearchHealthcareComponent },
